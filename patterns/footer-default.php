@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer with text, links.
- * Slug: frost/footer-default
+ * Slug: frostcove/footer-default
  * Categories: footer
  * Block Types: core/template-part/footer
  */

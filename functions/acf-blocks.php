@@ -8,7 +8,7 @@ if (!defined('ABSPATH')) {
 
 
 
-class TR_ACF_Blocks
+class RegisterACFBlocks
 {
 
   /**
@@ -27,9 +27,9 @@ class TR_ACF_Blocks
   {
 
     // manage state to keep only one instace in memory
-    if (!isset(self::$instance) && !(self::$instance instanceof TR_ACF_Blocks)) {
+    if (!isset(self::$instance) && !(self::$instance instanceof RegisterACFBlocks)) {
 
-      self::$instance = new TR_ACF_Blocks();
+      self::$instance = new RegisterACFBlocks();
       self::$instance->includes();
     }
 
@@ -41,8 +41,8 @@ class TR_ACF_Blocks
   {
 
     // ... require_once template files here
-    // require_once(get_template_directory() . '/acf-blocks/block-name.php');
+    // require_once(get_template_directory() . '/acf-blocks/example-block/example-block.php');
   }
 }
 
-TR_ACF_Blocks::instance();
+RegisterACFBlocks::instance();

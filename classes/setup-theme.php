@@ -82,7 +82,7 @@ class SetupTheme
 			// This theme uses wp_nav_menu() in one location.
 			register_nav_menus(
 				array(
-					'menu-1' => esc_html__('Primary', 'tabula-rasa'),
+					'menu-1' => esc_html__('Primary', 'frostcove'),
 				)
 			);
 		});
@@ -96,7 +96,7 @@ class SetupTheme
 			 * Make theme available for translation.
 			 * Translations can be filed in the /languages/ directory.
 			 */
-			load_theme_textdomain('tabula-rasa', get_template_directory() . '/languages');
+			load_theme_textdomain('frostcove', get_template_directory() . '/languages');
 
 
 			// Add default posts and comments RSS feed links to head.
@@ -136,16 +136,16 @@ class SetupTheme
 
 
 			// Set up the WordPress core custom background feature.
-			add_theme_support(
-				'custom-background',
-				apply_filters(
-					'tabula-rasa_custom_background_args',
-					array(
-						'default-color' => 'ffffff',
-						'default-image' => '',
-					)
-				)
-			);
+			// add_theme_support(
+			// 	'custom-background',
+			// 	apply_filters(
+			// 		'tabula-rasa_custom_background_args',
+			// 		array(
+			// 			'default-color' => 'ffffff',
+			// 			'default-image' => '',
+			// 		)
+			// 	)
+			// );
 
 			// Add theme support for selective refresh for widgets.
 			add_theme_support('customize-selective-refresh-widgets');
