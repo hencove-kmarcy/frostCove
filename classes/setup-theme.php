@@ -166,6 +166,8 @@ class SetupTheme
 			);
 
 
+			add_filter( 'show_admin_bar', '__return_true' );
+
 			/**
 			 *  theme supports related to the block editor
 			 */
