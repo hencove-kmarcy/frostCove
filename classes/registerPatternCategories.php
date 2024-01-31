@@ -48,15 +48,15 @@ class RegisterPatternCategories
 			register_block_pattern_category(
 				'page',
 				array(
-					'label'       => __('Page', 'frost'),
-					'description' => __('Create a full page with multiple patterns that are grouped together.', 'frost'),
+					'label'       => __('Page', 'frostcove'),
+					'description' => __('Create a full page with multiple patterns that are grouped together.', 'frostcove'),
 				)
 			);
 			register_block_pattern_category(
 				'pricing',
 				array(
-					'label'       => __('Pricing', 'frost'),
-					'description' => __('Compare features for your digital products or service plans.', 'frost'),
+					'label'       => __('Pricing', 'frostcove'),
+					'description' => __('Compare features for your digital products or service plans.', 'frostcove'),
 				)
 			);
 		});
