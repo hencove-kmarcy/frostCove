@@ -169,7 +169,7 @@
 				},
 				{
 					"name": "xLarge",
-					"size": "clamp(60px, 10vw, 100px)",
+					"size": "clamp(60px, 10vw, 180px)",
 					"slug": "x-large"
 				}
 			],
