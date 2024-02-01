@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+import './_experimental/_tinyCookiePopup.js';
 //
 (function (document, window, $) {
 	//

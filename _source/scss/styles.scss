@@ -2,5 +2,38 @@
 // 
 @import './base';
 // @import './blocks';
+
+
+#cove--temp-cookie-consent {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    > div {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 16px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 48px;
+        border: 1px solid gray;
+        border-bottom: 0px solid transparent;
+        background-color: white;
+        color: black;
+    }
+    a {
+        text-decoration: none;
+        font-size: 36px;
+        line-height: 36px;
+    }
+    p {
+        max-width: 680px;
+    }
+}
+
 // 
 /* end styles.css */
