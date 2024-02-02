@@ -1,0 +1,13 @@
+header.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: var(--wp--preset--color--base);
+    color: var(--wp--preset--color--contrast);
+    border-bottom: 1px solid var(--wp--preset--color--neutral);
+    ~ main {
+        margin-top: 90px !important;
+    }
+}

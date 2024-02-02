@@ -1,0 +1,18 @@
+//
+//
+body.admin-bar {
+	// nudge the header
+	header.site-header {
+		top: 32px;
+		@include media("<=782px") {
+			top: 0;
+		}
+	}
+
+	// hide the adminbar on the front end once it switches to icons
+	@include media("<=782px") {
+		#wpadminbar {
+			display: none !important;
+		}
+	}
+}
