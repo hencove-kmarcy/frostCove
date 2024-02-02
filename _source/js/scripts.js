@@ -4,14 +4,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-import './_experimental/_tinyCookiePopup.js';
 //
 (function (document, window, $) {
 	//
 	// jQuery is ready as $
 
 	const fadeIn_Elements = gsap.utils.toArray([
-		".entry-content > .wp-block-group.alignfull > .wp-block-group",
+		".entry-content > .wp-block-group.alignfull > *",
 		".entry-content > .wp-block-group:not(.alignfull)",
 	]);
 
