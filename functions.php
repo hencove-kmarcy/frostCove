@@ -14,3 +14,4 @@
 require_once(get_template_directory() . '/classes/setup-theme.php');
 require_once(get_template_directory() . '/classes/registerBlockStyles.php');
 require_once(get_template_directory() . '/classes/registerPatternCategories.php');
+require_once( get_template_directory() . '/functions/apply-filters.php' );
