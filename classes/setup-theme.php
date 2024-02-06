@@ -35,7 +35,7 @@ class SetupTheme
 			self::$instance->enqueueStyles();
 			self::$instance->enqueueScripts();
 			// 
-			self::$instance->registerMenus();
+			// self::$instance->registerMenus();
 			self::$instance->setThemeSupports();
 		}
 
@@ -147,8 +147,6 @@ class SetupTheme
 			// 	)
 			// );
 
-			// Add theme support for selective refresh for widgets.
-			add_theme_support('customize-selective-refresh-widgets');
 
 			/**
 			 * Add support for core custom logo.
@@ -166,32 +164,29 @@ class SetupTheme
 			);
 
 
-			add_filter( 'show_admin_bar', '__return_true' );
+			add_filter('show_admin_bar', '__return_true');			// force showing the admin bar when logged in (front end)
+			add_theme_support('body-open');								// enable wp_body_open filter
+			add_post_type_support('page', 'excerpt');						// let pages have excerpts
 
 			/**
-			 *  theme supports related to the block editor
+			 * 
+			 * 		Block Editor Filter / Supports
+			 * 
 			 */
+			add_filter('should_load_remote_block_patterns', '__return_false');  // remove remote block patterns
+			add_filter('should_load_separate_core_block_assets', '__return_true');    // enable / enforce loading separate block stylesheets
 			add_theme_support('disable-custom-font-sizes');        // disable wp core custom font sizes
 			add_theme_support('disable-custom-colors');            // disable wp core custom colors
 			add_theme_support('disable-custom-gradients');        // disable wp core custom gradients
 			add_theme_support('align-wide');                      // enable wide alignment for blocks
 			add_theme_support('custom-spacing');                  // opt-in to letting blocks set padding
-			add_post_type_support('page', 'excerpt');						// let pages have excerpts
-			add_theme_support('body-open');								// enable wp_body_open filter
-
-
-			add_filter('should_load_separate_core_block_assets', '__return_true');    // separate block stylesheets
-			/**
-			 * 
-			 */
-			remove_theme_support('core-block-patterns');           // remove the "patterns" library
-			add_filter('should_load_remote_block_patterns', '__return_false');  // remove remote block patterns
 			add_theme_support('editor-gradient-presets', []); // remove the preset gradients in wp core
 			add_theme_support('editor-styles');
-			// 
+			remove_theme_support('core-block-patterns');           // remove the "patterns" library
+			/**
+			 * register our editor stylesheet
+			 */
 			add_editor_style(get_template_directory_uri() . '/_build/css/editor-styles.css');
-
-			
 		});
 	}
 

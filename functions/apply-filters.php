@@ -17,4 +17,4 @@ function search_filter($query)
         }
     }
 }
-add_action('pre_get_posts', 'search_filter');
+// add_action('pre_get_posts', 'search_filter');

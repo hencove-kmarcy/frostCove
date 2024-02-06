@@ -12,5 +12,7 @@ mix
     .options({
         processCssUrls: false
     });
-    
-mix.browserSync('tabula-rasa.local')
+// https://browsersync.io/docs/options/
+mix.browserSync({
+    proxy: 'frostscape.local'
+});
